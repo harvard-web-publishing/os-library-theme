@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function ($)
 
     // Add placeholder text in searchbox
     $("input").attr("placeholder", "Search this site");
