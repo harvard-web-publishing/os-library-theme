@@ -1,4 +1,4 @@
-<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet"><style>
 /* GLOBAL */
 
 html {
@@ -1000,11 +1000,7 @@ body.page-home .region-content-top::after {
 
 div[id^=event-popover] .event-title a {
     color: #0579b8;
-    font-size: 1em;
-}
-
-div[id^=event-popover] .event-title {
-    margin-top: 10px;
+    font-size: 1.32em;
 }
 
 .ui-widget .event-location,
@@ -1015,7 +1011,11 @@ div[id^=event-popover] .event-title {
 }
 
 .ui-button-icon-only .ui-icon {
-    margin-top: 5px;
+    margin-top: 0;
+}
+
+.page-calendar .ui-button-icon-only .ui-icon {
+    left: 95%;
 }
 
 
@@ -2355,3 +2355,4 @@ ul.pager li a:focus {
     content: "";
 }
 
+</style>
