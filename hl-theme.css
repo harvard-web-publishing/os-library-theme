@@ -34,6 +34,15 @@ textarea {
     font-family: "Lora", Georgia, serif;
 }
 
+/* ACCESSIBILITY FIX FOR EMBED MEDIA WIDGETS - HIDES H2 AND LINK TAGS */
+.block-boxes-os_boxes_media .element-invisible {
+  display: none;
+}
+
+/* EMBEDDED IFRAMES  */
+.hl__embed iframe {
+  width: 100%;
+}
 
 /* CONTAINER MARGINS */
 
@@ -278,6 +287,8 @@ a.register,
     transition: all 0.4s ease;
     background-color: #1e1e1e;
     color: #ffffff;
+    display: inline-block;
+    text-align: center;
 }
 
 #columns a.hl__button:hover,
@@ -398,6 +409,7 @@ body.page-home .region-content-top h2 {
     font-size: 60px;
     line-height: 74px;
     padding: 0;
+    max-width: 930px;
 }
 
 h2,
@@ -453,6 +465,7 @@ body.page-home .region-content-top p {
     font-style: italic;
     font-size: 26px;
     line-height: 40px;
+    max-width: 930px;
 }
 
 
@@ -659,7 +672,8 @@ article.node .field-name-body ul li::before {
 
 #menu-bar nav,
 #menu-bar #block-os-primary-menu {
-    width: 100%;
+    /* width: 100%; */
+    width: auto;
     margin: 0;
 }
 
@@ -893,6 +907,12 @@ body.page-home .region-content-top::after {
     content: "";
     display: block;
     height: 1px;
+}
+
+body.page-home .region-content-top h2, body.page-home .region-content-top p {
+  /* max-width: 930px; */
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 
@@ -2354,4 +2374,3 @@ ul.pager li a:focus {
 #content-column .block ul.contextual-links li::before {
     content: "";
 }
-
