@@ -226,11 +226,11 @@
   #menu-bar {
    background:#1e1e1e !important;
   }
-  #search-block-form #edit-actions::before,
+  /* #search-block-form #edit-actions::before,
   body.page-search .hl__search-box-icon::before {
     right: 12px;
     bottom: 0;
-  }
+  } */
   .block-os-search-solr,
   #block-boxes-solr-search-box {
       padding-left: 0;
