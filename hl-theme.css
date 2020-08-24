@@ -171,7 +171,7 @@ a:visited,
     color: #0579b8;
     font-family: "Trueno", sans-serif;
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 600 !important;
     font-style: normal;
     text-decoration: none;
     transition: border 0.28s cubic-bezier(0.28, 1.08, 1, 0.96);
@@ -1059,9 +1059,12 @@ div[id^=event-popover] .event-title {
     color: #6c6c6c;
     font-family: "Trueno", sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 0px;
     padding: 6px;
     border: none;
+}
+.calendar-calendar th.days:first-letter {
+  font-size: 14px;
 }
 
 .calendar-calendar td {
@@ -1098,6 +1101,7 @@ table td.mini .mini-day-on:focus {
 .calendar-calendar td.has-no-events,
 .calendar-calendar td.has-events {
     border: 1px solid #dfdfdf;
+    background: none;
 }
 
 .page-calendar ul.tabs.primary {
@@ -1133,6 +1137,7 @@ table td.mini .mini-day-on:focus {
 .calendar-calendar td .inner div.calendar div a {
     border: none;
     font-size: 1.1em;
+    font-weight: 600 !important;
 }
 
 table td.mini,
@@ -1535,7 +1540,7 @@ ul.pager li a:focus {
 
 .hl__content-block--dots-button {
     text-align: center;
-    padding: 0;
+    /* padding: 0; */
 }
 
 #content-column .hl__content-block--dots-button .block-inner {
@@ -1587,21 +1592,21 @@ ul.pager li a:focus {
 }
 
 .hl__content-block--dark-image h2,
-#content-column .hl__content-block--dark-image,
+#content-column .hl__content-block--dark-image p,
 .hl__quick-facts ul li {
     color: white;
 }
 
-.hl__content-block--dark-image h2, .hl__content-block--dark-image p,
+/* .hl__content-block--dark-image h2, .hl__content-block--dark-image p,
 .hl__content-block--light-image h2, .hl__content-block--light-image p {
-  padding-left: 40px;
-  padding-right: 40px;
-}
+  padding-left: 20px;
+  padding-right: 20px;
+} */
 
 .hl__content-block--dark-image .boxes-box-content div,
 .hl__content-block--light-image .boxes-box-content div,
 .hl__quick-facts .boxes-box-content ul {
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 930px;
     padding: 40px 0;
     position: absolute;
@@ -1644,6 +1649,7 @@ ul.pager li a:focus {
     max-width: 300px;
     text-align: center;
     margin: 0 20px;
+    font-family: "Trueno", sans-serif;
 }
 
 .hl__quick-facts .boxes-box-content ul {

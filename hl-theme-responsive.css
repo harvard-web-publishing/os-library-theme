@@ -30,6 +30,47 @@
   #menu-bar ul.nice-menu a {
     font-size: 17px;
   }
+
+  /* content block left-align */
+  .hl__content-block--dark-image,
+  .hl__content-block--light-image,
+  .hl__content-block--dots-button,
+  .hl__quick-facts {
+      text-align: left;
+  }
+  /* change background images into solid colors */
+  .hl__content-block--dark-image .boxes-box-content > p::before {
+    background: #1e1e1e;
+  }
+  .hl__content-block--light-image .boxes-box-content > p::before {
+  	background-color: #fafafa;
+  }
+  /* update height */
+  .hl__content-block--dark-image,
+  .hl__content-block--light-image,
+  .hl__quick-facts {
+      max-height: 440px;
+  }
+  /* update padding and font-size */
+  .hl__content-block--dark-image .boxes-box-content>p,
+  .hl__content-block--light-image .boxes-box-content>p,
+  .hl__quick-facts .boxes-box-content>p {
+      height: 440px;
+  }
+  .hl__content-block--dots .block-inner, #content-column .hl__content-block--dots-button .block-inner {
+    padding: 40px;
+  }
+  .not-front #content-column .hl__content-block--dark-image p,
+  .not-front #content-column .hl__content-block--light-image p,
+  .not-front #content-column .hl__content-block--dots p,
+  .not-front #content-column .hl__content-block--dots-button p {
+    font-size: 17px;
+  }
+  /* sizing of quick facts */
+  .hl__quick-facts strong {
+  	font-size: 80px;
+  	line-height: 100px;
+  }
 }
 
 /* header responsive styles */
