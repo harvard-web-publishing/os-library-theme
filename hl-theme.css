@@ -273,9 +273,9 @@ a.more-link::after,
 #columns a.hl__button--outline,
 #columns a.hl__button--small,
 a.register,
-.hl__content-block--dots-button a,
-.hl__content-block--dark-image a,
-.hl__content-block--light-image a {
+.hl__content-block--dots-button .boxes-box-content a,
+.hl__content-block--dark-image .boxes-box-content a,
+.hl__content-block--light-image .boxes-box-content a {
     border: 2px solid transparent;
     border-radius: 4px;
     letter-spacing: 1.17px;
@@ -309,8 +309,8 @@ a.register,
 
 #columns a.hl__button--blue,
 a.register,
-.hl__content-block--dark-image a,
-.hl__content-block--light-image a {
+.hl__content-block--dark-image .boxes-box-content a,
+.hl__content-block--light-image .boxes-box-content a {
     background-color: #0579B8;
 }
 
@@ -318,10 +318,10 @@ a.register,
 #columns a.hl__button--blue:focus,
 a.register:hover,
 a.register:focus,
-#columns .hl__content-block--dark-image a:hover,
-#columns .hl__content-block--dark-image a:focus,
-#columns .hl__content-block--light-image a:hover,
-#columns .hl__content-block--light-image a:focus {
+#columns .hl__content-block--dark-image .boxes-box-content a:hover,
+#columns .hl__content-block--dark-image .boxes-box-content a:focus,
+#columns .hl__content-block--light-image .boxes-box-content a:hover,
+#columns .hl__content-block--light-image .boxes-box-content a:focus {
     background-color: #2A5280;
     border-color: #2A5280;
 }
@@ -348,7 +348,7 @@ a.register:focus,
 
 /* SMALL BLACK BUTTON */
 
-#columns .hl__content-block--dots-button a,
+#columns .hl__content-block--dots-button .boxes-box-content a,
 #columns a.hl__button--small {
     border: transparent;
     font-size: 12px;
@@ -358,8 +358,8 @@ a.register:focus,
     color: white;
 }
 
-#columns .hl__content-block--dots-button a:hover,
-#columns .hl__content-block--dots-button a:focus,
+#columns .hl__content-block--dots-button .boxes-box-content a:hover,
+#columns .hl__content-block--dots-button .boxes-box-content a:focus,
 #columns a.hl__button--small:hover,
 #columns a.hl__button--small:focus {
     background-color: #6c6c6c;
