@@ -31,7 +31,7 @@
     font-size: 17px;
   }
 
-  /* content block left-align */
+  /* CONTENT BLOCK LEFT-ALIGN */
   .hl__content-block--dark-image,
   .hl__content-block--light-image,
   .hl__content-block--dots-button,
@@ -66,7 +66,7 @@
   .not-front #content-column .hl__content-block--dots-button p {
     font-size: 17px;
   }
-  /* sizing of quick facts */
+  /* quick facts */
   .hl__quick-facts strong {
   	font-size: 80px;
   	line-height: 100px;
@@ -264,6 +264,8 @@
   }
   #menu-bar {
    background:#1e1e1e !important;
+   grid-template-columns: 100%;
+   justify-items: center;
   }
   #search-block-form #edit-actions::before,
   body.page-search .hl__search-box-icon::before {
@@ -272,8 +274,11 @@
   }
   .block-os-search-solr,
   #block-boxes-solr-search-box {
-      padding-left: 0;
-      padding-right: 0;
+    /* padding-left: 0;
+    padding-right: 0; */
+    max-width: 480px;
+    /* min-width: 270px; */
+    width: 100% !important;
   }
   .search-block-form,
   #search-block-form {

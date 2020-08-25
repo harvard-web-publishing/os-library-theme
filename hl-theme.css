@@ -803,6 +803,9 @@ ul.nice-menu ul {
     padding: 14px 25px;
 }
 
+.search-block-form, #search-block-form {
+	padding-bottom: 0;
+}
 .search-block-form .container-inline,
 #search-block-form .container-inline,
 #search-form .container-inline {
@@ -821,7 +824,7 @@ ul.nice-menu ul {
     font-weight: 300;
     padding: 7px !important;
     border-color: transparent;
-    border-radius: 0 4px 4px 0 !important;
+    border-radius: 4px !important;
 }
 
 
@@ -997,6 +1000,10 @@ div[id^=event-popover] .event-title a {
     font-family: "Trueno", sans-serif;
 }
 
+div[aria-describedby^=event-popover] .ui-helper-clearfix::after {
+  clear:none;
+}
+
 .ui-widget .event-location,
 .ui-widget .event-date span {
     font-size: 14px;
@@ -1016,7 +1023,7 @@ div[id^=event-popover] .event-title a {
     font-family: "Trueno", sans-serif;
     font-weight: normal;
 }
-div[id^=event-popover] .date-display-start::before {
+div[id^=event-popover] .date-display-single .date-display-start::before {
   content: "\A";
   white-space: pre;
 }
@@ -1077,14 +1084,6 @@ div[aria-describedby*=" event-popover-"] .ui-icon-closethickt {
   top: 0;
 }
 
-.page-calendar ul.tabs.primary li.active a {
-    background: #fafafa;
-    color: #6c6c6c;
-}
-.page-calendar ul.tabs.primary li a {
-    padding: 10px 20px;
-}
-
 #main-content .view-os-events.view-id-os_events .view-content {
   padding: 0 30px 30px 30px;
 }
@@ -1105,7 +1104,6 @@ div[aria-describedby*=" event-popover-"] .ui-icon-closethickt {
 .item-list .pager {
   padding-top: 0;
 }
-
 
 /* hide dates from past/future months in calendar view */
 
@@ -1139,7 +1137,7 @@ div[aria-describedby*=" event-popover-"] .ui-icon-closethickt {
     padding: 6px;
     border: none;
 }
-.calendar-calendar th.days:first-letter {
+.calendar-calendar th.days::first-letter {
   font-size: 14px;
 }
 
@@ -1180,28 +1178,36 @@ table td.mini .mini-day-on:focus {
     background: none;
 }
 
+/* calendar tabs */
+.page-calendar ul.tabs.primary, .page-calendar ul.primary li a, .page-calendar ul.tabs.primary li.active a {
+    background: #fafafa;
+}
+.page-calendar #tasks {
+  margin-top: 15px;
+}
 .page-calendar ul.tabs.primary {
-    border-bottom: none;
+    padding: 20px;
 }
-
-.page-calendar ul.tabs.primary li.active a {
-    border: none;
-    background: #f5f5f5;
-}
-
 .page-calendar ul.tabs.primary li a {
-    border-bottom: none;
+    padding: 0;
+    margin: 10px 20px;
+    border: none;
+    border-bottom: 3px solid transparent;
 }
-
-.page-calendar ul.primary li a {
-    background-color: #fff;
-    border-color: #fff;
+.page-calendar ul.tabs.primary li a:hover, .page-calendar ul.tabs.primary li a:focus {
+    border-bottom-color: rgba(5, 121, 184, 0.3);
 }
-
+.page-calendar ul.tabs.primary li.active a {
+    color: #1e1e1e;
+    border: none;
+    border-bottom: 3px solid #f8c21c;
+}
 .page-calendar ul.primary li:nth-child(5),
 .page-calendar ul.primary li:nth-child(6) {
     display: none;
 }
+
+
 
 .calendar-calendar .month-view .full td.single-day div.monthview,
 .calendar-calendar .week-view .full td.single-day div.weekview,
@@ -1341,6 +1347,15 @@ table td.mini .mini-day-on a {
  /* NOT ACCESSIBLE AND SHOULD FIND ANOTHER SOLUTION */
 }
 
+.ui-dialog *,
+.message-wrapper a,
+.message-wrapper,
+.message-wrapper h2,
+div.messages ul li {
+ font-family: "Trueno", sans-serif;
+}
+
+
 
 /* external link icon */
 
@@ -1444,7 +1459,7 @@ table td.mini .mini-day-on a {
     font-size: 15px;
 }
 
-.sidebar .date-display-single {
+.sidebar .date-display-single, .event-date .date-display-single {
     text-transform: uppercase;
 }
 
@@ -2257,25 +2272,6 @@ ul.pager li a:focus {
 
 
 /* Center */
-
-
-/* #footer .region-inner.clearfix, #footer .hl__footer--links-column {
-  padding-top: 0;
-  max-width: 310px;
-  width: 100%;
-}
-@media (min-width: 621px) {
-  #footer .region-inner.clearfix, #footer .hl__footer--links-column {
-    flex-basis: 290px;
-    flex-grow: 1;
-    flex-shrink: 0;
-    margin-right: 30px;
-  }
-}
-#footer .hl__footer--links-column li:last-child {
-  margin-top: 1.1em;
-} */
-
 .hl__footer--links {
     display: flex;
     flex: none;
@@ -2509,4 +2505,28 @@ ul.pager li a:focus {
 
 #content-column .block ul.contextual-links li::before {
     content: "";
+}
+
+/* account icon */
+#topRightMenu {
+ height:60px;
+ background-position-y: 13px;
+}
+.topRight_Menu {
+ padding:0 10px;
+}
+#rightMenuSlide {
+ top:60px;
+ padding: 0;
+}
+.topRight_subMenu {
+ margin-top:0;
+}
+@media(max-width:768px){
+  #rightMenuSlide {
+   top:120px;
+  }
+  .topRight_Menu {
+   top:60px;
+  }
 }
