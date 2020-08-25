@@ -34,6 +34,8 @@
   /* CONTENT BLOCK LEFT-ALIGN */
   .hl__content-block--dark-image,
   .hl__content-block--light-image,
+  .hl__content-block--dark,
+  .hl__content-block--light,
   .hl__content-block--dots-button,
   .hl__quick-facts {
       text-align: left;
@@ -57,11 +59,14 @@
   .hl__quick-facts .boxes-box-content>p {
       height: 440px;
   }
-  .hl__content-block--dots .block-inner, #content-column .hl__content-block--dots-button .block-inner {
+  .hl__content-block--dots .block-inner, #content-column .hl__content-block--dots-button .block-inner,
+  #content-column .hl__content-block--dark .block-inner, #content-column .hl__content-block--light .block-inner {
     padding: 40px;
   }
   .not-front #content-column .hl__content-block--dark-image p,
   .not-front #content-column .hl__content-block--light-image p,
+  .not-front #content-column .hl__content-block--dark p,
+  .not-front #content-column .hl__content-block--light p,
   .not-front #content-column .hl__content-block--dots p,
   .not-front #content-column .hl__content-block--dots-button p {
     font-size: 17px;
