@@ -223,7 +223,7 @@
     font-size: 16px;
     font-weight: 200;
   }
-  #menu-bar #block-os-primary-menu a.active.active ~ ul li a::before {
+  #menu-bar #block-os-primary-menu ul ul li a::before {
     content: "\2014";
     padding-right: 5px;
   }
@@ -247,7 +247,7 @@
    background: #f2f2f2 !important;
   }
   /* if active state has a submenu, prevent chevron from flipping on hover */
-  #menu-bar ul.nice-menu .menuparent>a::before {
+  #menu-bar ul.nice-menu .menuparent >a.active::before {
       transform: scaleY(-1) rotate(135deg);
   }
 
@@ -270,28 +270,27 @@
   }
   .block-os-search-solr,
   #block-boxes-solr-search-box {
-    /* padding-left: 0;
-    padding-right: 0; */
     max-width: 480px;
-    /* min-width: 270px; */
     width: 100% !important;
   }
   .search-block-form,
   #search-block-form {
     margin-left:0;
   }
-
   .search-block-form .container-inline .form-item .form-text,
   #search-block-form .container-inline .form-item .form-text {
       border-color: transparent;
+      width: 100% !important;
   }
 }
+
 .region-header-third .region-inner {
     padding-top: 15px !important;
 }
 .region-header-second div {
   float: none;
 }
+
 @media(max-width:479px){
   .region-header-second .region-inner {
     padding-top: 0px !important;
@@ -306,6 +305,7 @@
   }
 }
 
+/* sidebar */
 @media(max-width:1008px){
   .one-sidebar.sidebar-first .content-inner {
     margin-left: 0% !important;

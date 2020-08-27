@@ -847,20 +847,25 @@ ul.nice-menu ul {
 }
 #search-form .container-inline {
  border: 1px solid #1e1e1e;
+ max-width: 720px;
 }
 #search-form #edit-basic #edit-submit {
   width: 25px;
 }
 #edit-keys {
-    /* width: 100%; */
-    max-width: 560px;
-    height: 45px;
-    font-size: 18px;
-    background: #ffffff;
-    border: transparent;
-    border-radius: 4px;
-    font-weight: 400;
+  width: calc(100% - 14px);
+  /* max-width: 560px; */
+  height: 45px;
+  font-size: 18px;
+  background: #ffffff;
+  border: transparent;
+  border-radius: 4px;
+  font-weight: 400;
 }
+.page-search input.form-text {
+  padding-right:7px;
+}
+
 
 
 /* magnifying glass */
@@ -1701,7 +1706,8 @@ ul.pager li a:focus {
 
 .hl__content-block--dots,
 .hl__content-block--dots-button {
-    background: #FFFFFF url(https://beta.projects.iq.harvard.edu/files/harvardlibraryux/files/dots.png) top center repeat;
+    background: #FFFFFF url('../images/dots.png') top center repeat;
+    /* if create a css folder, use ../images/dots.png */
 }
 
 
