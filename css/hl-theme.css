@@ -1762,7 +1762,7 @@ ul.pager li a:focus {
 }
 
 
-/* dark image */
+/* image backgrounds */
 
 .hl__content-block--dark-image,
 .hl__content-block--light-image,
@@ -1845,7 +1845,6 @@ ul.pager li a:focus {
 .hl__quick-facts li {
     max-width: 300px;
     text-align: center;
-    /* margin: 0 20px; */
     font-family: "Trueno", sans-serif;
 }
 
