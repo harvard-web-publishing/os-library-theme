@@ -1353,7 +1353,7 @@ table td.mini .mini-day-on a {
     background: none;
 }
 .year-view {
- overflow-x: auto;
+ /* overflow-x: auto; */
  /* NOT ACCESSIBLE AND SHOULD FIND ANOTHER SOLUTION */
 }
 
@@ -1774,6 +1774,8 @@ ul.pager li a:focus {
 .hl__quick-facts img {
     width: 100% !important;
     height: auto !important;
+    min-height: 100%;
+    object-fit: cover;
     position: absolute;
     top: -9999px;
     bottom: -9999px;
@@ -1791,12 +1793,6 @@ ul.pager li a:focus {
     color: white;
 }
 
-/* .hl__content-block--dark-image h2, .hl__content-block--dark-image p,
-.hl__content-block--light-image h2, .hl__content-block--light-image p {
-  padding-left: 20px;
-  padding-right: 20px;
-} */
-
 .hl__content-block--dark-image .boxes-box-content div,
 .hl__content-block--light-image .boxes-box-content div,
 .hl__quick-facts .boxes-box-content ul {
@@ -1813,8 +1809,9 @@ ul.pager li a:focus {
 .hl__content-block--dark-image .boxes-box-content>p,
 .hl__content-block--light-image .boxes-box-content>p,
 .hl__quick-facts .boxes-box-content>p {
-    height: 400px;
+    height: 320px;
     width: 100%;
+    padding: 40px 0;
     margin-bottom: 0;
 }
 
@@ -1842,7 +1839,7 @@ ul.pager li a:focus {
 .hl__quick-facts li {
     max-width: 300px;
     text-align: center;
-    margin: 0 20px;
+    /* margin: 0 20px; */
     font-family: "Trueno", sans-serif;
 }
 
@@ -1852,6 +1849,7 @@ ul.pager li a:focus {
     flex-wrap: wrap;
     justify-content: space-around;
     max-width: 100%;
+    grid-gap: 0 10px;
 }
 
 #content-column .hl__quick-facts.block ul {

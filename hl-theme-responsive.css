@@ -40,25 +40,6 @@
   .hl__quick-facts {
       text-align: left;
   }
-  /* change background images into solid colors */
-  .hl__content-block--dark-image .boxes-box-content > p::before {
-    background: #1e1e1e;
-  }
-  .hl__content-block--light-image .boxes-box-content > p::before {
-  	background-color: #fafafa;
-  }
-  /* update height */
-  .hl__content-block--dark-image,
-  .hl__content-block--light-image,
-  .hl__quick-facts {
-      max-height: 440px;
-  }
-  /* update padding and font-size */
-  .hl__content-block--dark-image .boxes-box-content>p,
-  .hl__content-block--light-image .boxes-box-content>p,
-  .hl__quick-facts .boxes-box-content>p {
-      height: 440px;
-  }
   .hl__content-block--dots .block-inner, #content-column .hl__content-block--dots-button .block-inner,
   #content-column .hl__content-block--dark .block-inner, #content-column .hl__content-block--light .block-inner {
     padding: 40px;
@@ -68,13 +49,14 @@
   .not-front #content-column .hl__content-block--dark p,
   .not-front #content-column .hl__content-block--light p,
   .not-front #content-column .hl__content-block--dots p,
-  .not-front #content-column .hl__content-block--dots-button p {
+  .not-front #content-column .hl__content-block--dots-button p,
+  .hl__quick-facts li {
     font-size: 17px;
   }
   /* quick facts */
   .hl__quick-facts strong {
-  	font-size: 80px;
-  	line-height: 100px;
+  	font-size: 72px;
+  	line-height: 80px;
   }
 }
 
@@ -239,6 +221,11 @@
   /* submenu */
   #menu-bar #block-os-primary-menu ul ul a {
     font-size: 16px;
+    font-weight: 200;
+  }
+  #menu-bar #block-os-primary-menu a.active.active ~ ul li a::before {
+    content: "\2014";
+    padding-right: 5px;
   }
   #menu-bar #block-os-primary-menu ul ul a:hover,
   #menu-bar #block-os-primary-menu ul ul a:focus {
@@ -258,6 +245,10 @@
   #menu-bar #block-os-primary-menu a.active.active ~ ul li a:hover,
   #menu-bar #block-os-primary-menu a.active.active ~ ul li a:focus {
    background: #f2f2f2 !important;
+  }
+  /* if active state has a submenu, prevent chevron from flipping on hover */
+  #menu-bar ul.nice-menu .menuparent>a::before {
+      transform: scaleY(-1) rotate(135deg);
   }
 
   /* searchbox */
@@ -304,6 +295,14 @@
 @media(max-width:479px){
   .region-header-second .region-inner {
     padding-top: 0px !important;
+  }
+
+  /* resize content blocks with background images */
+  .hl__content-block--dark-image, .hl__content-block--light-image, .hl__quick-facts {
+    max-height: 100%;
+  }
+  .hl__content-block--dark-image .boxes-box-content > p, .hl__content-block--light-image .boxes-box-content > p, .hl__quick-facts .boxes-box-content > p {
+    height: 440px;
   }
 }
 
@@ -373,5 +372,59 @@
     border-right: 0;
     border-bottom: 1px solid #c0c0c0;
     margin-bottom: 0 !important;
+  }
+}
+
+
+/* yearly calendar view two-column layout */
+@media(max-width:1270px){
+  #main-content .view-os-events.view-id-os_events .view-content {
+    padding: 0 10px 10px 10px;
+  }
+  .calendar-calendar .year-view > table > tbody > tr > td {
+    display: inline-table;
+    border: 5px solid transparent;
+    width: 100%;
+  }
+  .year-view > table:nth-child(1) > tbody:nth-child(1) {
+   display: grid;
+   grid-template-rows: repeat(6, 300px);
+   max-width: 575px;
+   margin-left: auto;
+   margin-right: auto;
+  }
+  .year-view > table:nth-child(1) > tbody:nth-child(1) > tr {
+   display: grid;
+   /* grid-template-columns: 285px 285px; */
+   grid-template-columns: 50% 50%;
+   background: transparent;
+   grid-template-rows: 300px;
+  }
+  .year-view > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1) {
+   grid-column-start: 2;
+  }
+  .year-view > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(3) {
+   grid-row-start: 4;
+  }
+  .year-view > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(4) {
+   grid-row-start: 5;
+  }
+  .year-view > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(1) {
+   grid-column-start: 2;
+  }
+}
+
+/* yearly calendar view one-column layout */
+@media(max-width:670px){
+  .calendar-calendar .year-view > table > tbody > tr > td {
+    display: block;
+    border: none;
+    padding: 10px 0 !important;
+  }
+  .year-view > table:nth-child(1) > tbody:nth-child(1) {
+   display: block;
+  }
+  .year-view > table:nth-child(1) > tbody:nth-child(1) > tr {
+   display: block;
   }
 }
