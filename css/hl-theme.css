@@ -1878,7 +1878,7 @@ ul.pager li a:focus {
 
 /* PULL QUOTE */
 
-.hl__pull-quote {
+.hl__pull-quote, .hl__pull-quote--left {
     max-width: 1080px;
     padding-left: 20px;
     padding-right: 20px;
@@ -1886,7 +1886,7 @@ ul.pager li a:focus {
     margin-right: auto;
 }
 
-.hl__pull-quote.block-boxes-os_boxes_html {
+.hl__pull-quote.block-boxes-os_boxes_html, .hl__pull-quote--left.block-boxes-os_boxes_html {
     max-width: 930px;
 }
 
@@ -1898,7 +1898,8 @@ ul.pager li a:focus {
     margin-top: 60px;
 }
 
-#content-column .hl__pull-quote p:first-child {
+#content-column .hl__pull-quote p:first-child,
+#content-column .hl__pull-quote--left p:first-child {
     font-weight: 700;
     font-style: italic;
     font-size: 39px;
@@ -1906,7 +1907,8 @@ ul.pager li a:focus {
     color: #1e1e1e;
 }
 
-#content-column .hl__pull-quote p:nth-child(2) {
+#content-column .hl__pull-quote p:nth-child(2),
+#content-column .hl__pull-quote--left p:nth-child(2) {
     font-family: "Trueno", sans-serif;
     font-size: 17px;
     line-height: 22px;
@@ -1914,11 +1916,13 @@ ul.pager li a:focus {
     text-align: right;
 }
 
-#content-column .hl__pull-quote p:nth-child(2)::before {
+#content-column .hl__pull-quote p:nth-child(2)::before,
+#content-column .hl__pull-quote--left p:nth-child(2)::before {
     content: "\2014";
 }
 
-#content-column .hl__pull-quote p:first-child::after {
+#content-column .hl__pull-quote p:first-child::after,
+#content-column .hl__pull-quote--left p:first-child::after {
     content: "";
     position: absolute;
     right: 20px;
