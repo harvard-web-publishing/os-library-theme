@@ -1258,7 +1258,7 @@ table td.mini .mini-day-on a {
     border: transparent;
 }
 
-#block-views-os-events-block-1 {
+.page-calendar #block-views-os-events-block-1 {
     padding: 20px;
 }
 
@@ -1888,6 +1888,7 @@ ul.pager li a:focus {
 
 .hl__pull-quote.block-boxes-os_boxes_html, .hl__pull-quote--left.block-boxes-os_boxes_html {
     max-width: 930px;
+    padding: 0;
 }
 
 .hl__pull-quote .hl__pull-quote {
@@ -2257,8 +2258,10 @@ ul.pager li a:focus {
     line-height: 28px;
 }
 
-.page-search .sidebar li a.active {
+.page-search .sidebar li a.active,
+.sidebar li a.active {
     color: #1e1e1e;
+    border-color: #f8c21c;
 }
 
 .page-search .sidebar section:last-child {
