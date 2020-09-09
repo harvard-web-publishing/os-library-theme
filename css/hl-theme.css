@@ -1572,6 +1572,7 @@ ul.pager li a {
     line-height: 40px;
     white-space: nowrap;
     min-width: 40px;
+    text-transform: capitalize;
 }
 
 ul.pager li a:hover,
@@ -1579,15 +1580,15 @@ ul.pager li a:focus {
     background: #fafafa;
 }
 
-.pager-previous a::after {
+/* .pager-previous a::after {
     content: "Previous";
     margin-left: 3px;
-}
+} */
 
-.pager-next a::before {
+/* .pager-next a::before {
     content: "Next";
     margin-right: 3px;
-}
+} */
 
 
 /* list of posts - hover */

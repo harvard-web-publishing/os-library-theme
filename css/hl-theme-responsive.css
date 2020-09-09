@@ -351,6 +351,21 @@
   .one-sidebar.sidebar-first .content-inner h1#page-title {
     margin-top: 0;
   }
+  .sidebar-first .hg-container {
+   display: grid;
+   position: relative;
+  }
+  .sidebar-first #content-column {
+   grid-row-start: 2;
+  }
+  .sidebar-first #content-column .content-inner {
+   position: relative;
+   position: static;
+  }
+  .sidebar-first .breadcrumb {
+   position: absolute;
+   top: 0;
+  }
 }
 
 
