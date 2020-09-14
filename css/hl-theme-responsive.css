@@ -343,7 +343,7 @@
      top:120px;
   }
 
-  /* right sidebar - hack so doesn't wrap to bottom of page & make the rest of page full width again */
+  /* left sidebar - hack so doesn't wrap to bottom of page & make the rest of page full width again */
   .one-sidebar.sidebar-first .content-inner > * {
     margin-left: 0;
     margin-top: 15px;
@@ -366,6 +366,15 @@
    position: absolute;
    top: 0;
   }
+
+  /* right sidebar */
+  .sidebar-second .sidebar {
+  	margin-top: 0px;
+  }
+  .sidebar-second #columns .region-inner {
+  	padding: 20px !important;
+  }
+
 }
 
 

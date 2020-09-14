@@ -2222,7 +2222,7 @@ ul.pager li a:focus {
 }
 
 .page-search #columns .sidebar .region-inner {
-    padding: 20px;
+    padding: 20px !important;
     margin: 0;
 }
 
