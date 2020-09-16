@@ -1,7 +1,13 @@
+/* RESPONSIVE STYLES */
+
+/* OpenScholar breakpoints */
+/* @media(max-width:1008px){} */
+/* @media(max-width:768px){} */
+/* @media(max-width:479px){} */
 
 
-/* MOBILE CUTOFF */
-@media (max-width: 621px) {
+/* TYPOGRAPHY */
+@media(max-width:621px){
   body {
     font-size: 17px;
     line-height: 1.7058823529;  /* line-height/font-size */
@@ -30,8 +36,12 @@
   #menu-bar ul.nice-menu a {
     font-size: 17px;
   }
+}
 
-  /* CONTENT BLOCK LEFT-ALIGN */
+
+/* CONTENT BLOCKS */
+@media(max-width:621px){
+  /* align left */
   .hl__content-block--dark-image,
   .hl__content-block--light-image,
   .hl__content-block--dark,
@@ -53,14 +63,25 @@
   .hl__quick-facts li {
     font-size: 17px;
   }
+
   /* quick facts */
   .hl__quick-facts strong {
-  	font-size: 72px;
-  	line-height: 80px;
+    font-size: 72px;
+    line-height: 80px;
+  }
+}
+@media(max-width:479px){
+  /* resize content blocks with background images */
+  .hl__content-block--dark-image, .hl__content-block--light-image, .hl__quick-facts {
+    max-height: 100%;
+  }
+  .hl__content-block--dark-image .boxes-box-content > p, .hl__content-block--light-image .boxes-box-content > p, .hl__quick-facts .boxes-box-content > p {
+    height: 440px;
   }
 }
 
-/* header responsive styles */
+
+/* HEADER, MENU, & SEARCHBOX */
 @media(max-width:1008px){
   .at-panel.gpanel.panel-display.three-col.clearfix {
     padding-right: 0;
@@ -124,7 +145,6 @@
     padding-right: 10 !important;
     height: 60px !important;
   }
-
   .mobile-buttons a span {
    padding-left:0;
   }
@@ -198,7 +218,6 @@
   .region-header-third .os-custom-menu.opened,
   #menu-bar #block-os-primary-menu.opened {
      top:60px;
-     /* width:305px !important; */
   }
   #menu-bar #block-os-primary-menu {
      background: #1e1e1e;
@@ -266,7 +285,6 @@
   #search-block-form #edit-actions::before,
   body.page-search .hl__search-box-icon::before {
     right: 12px;
-    /* bottom: 0; */
   }
   .block-os-search-solr,
   #block-boxes-solr-search-box {
@@ -283,39 +301,7 @@
       width: 100% !important;
   }
 }
-
-.region-header-third .region-inner {
-    padding-top: 15px !important;
-}
-.region-header-second div {
-  float: none;
-}
-
-@media(max-width:479px){
-  .region-header-second .region-inner {
-    padding-top: 0px !important;
-  }
-
-  /* resize content blocks with background images */
-  .hl__content-block--dark-image, .hl__content-block--light-image, .hl__quick-facts {
-    max-height: 100%;
-  }
-  .hl__content-block--dark-image .boxes-box-content > p, .hl__content-block--light-image .boxes-box-content > p, .hl__quick-facts .boxes-box-content > p {
-    height: 440px;
-  }
-}
-
-/* sidebar */
-@media(max-width:1008px){
-  .one-sidebar.sidebar-first .content-inner {
-    margin-left: 0% !important;
-  }
-  .one-sidebar.sidebar-first .content-inner > * {
-    margin-left: 23.4%;
-  }
-}
-
-@media (max-width: 768px){
+@media(max-width:768px){
   .node-event .clearfix, #content .node-event .event-content .node-content .field-name-field-event-location {
     margin-left: 0 !important;
   }
@@ -325,7 +311,6 @@
   #content-panels .block {
     margin-bottom: 30px;
   }
-
   #header-panels {
     grid-template-columns: 100%;
   }
@@ -342,8 +327,25 @@
   #menu-bar #block-os-primary-menu.opened {
      top:120px;
   }
+}
+@media(max-width:479px){
+  .region-header-second .region-inner {
+    padding-top: 0px !important;
+  }
+}
 
-  /* left sidebar - hack so doesn't wrap to bottom of page & make the rest of page full width again */
+
+/* SIDEBARS */
+@media(max-width:1008px){
+  .one-sidebar.sidebar-first .content-inner {
+    margin-left: 0% !important;
+  }
+  .one-sidebar.sidebar-first .content-inner > * {
+    margin-left: 23.4%;
+  }
+}
+@media(max-width:768px){
+  /* left sidebar hack so doesn't wrap to bottom of page & make the rest of page full width again */
   .one-sidebar.sidebar-first .content-inner > * {
     margin-left: 0;
     margin-top: 15px;
@@ -374,11 +376,10 @@
   .sidebar-second #columns .region-inner {
   	padding: 20px !important;
   }
-
 }
 
 
-/* card view */
+/* CARD VIEW */
 @media(max-width:1008px){
   .hl__card-view article, .hl__card-view.block .node:last-child {
     width: calc(49% - 40px);
@@ -400,7 +401,19 @@
 }
 
 
-/* yearly calendar view two-column layout */
+/* TWITTER FEED */
+@media(max-width:768px){
+  ul.tweets-pulled-listing li {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #c0c0c0;
+    margin-bottom: 0 !important;
+  }
+}
+
+
+/* CALENDAR VIEW */
+/* yearly two-column layout */
 @media(max-width:1270px){
   #main-content .view-os-events.view-id-os_events .view-content {
     padding: 0 10px 10px 10px;
@@ -419,7 +432,6 @@
   }
   .year-view > table:nth-child(1) > tbody:nth-child(1) > tr {
    display: grid;
-   /* grid-template-columns: 285px 285px; */
    grid-template-columns: 50% 50%;
    background: transparent;
    grid-template-rows: 300px;
@@ -437,8 +449,7 @@
    grid-column-start: 2;
   }
 }
-
-/* yearly calendar view one-column layout */
+/* yearly one-column layout */
 @media(max-width:670px){
   .calendar-calendar .year-view > table > tbody > tr > td {
     display: block;
@@ -450,5 +461,66 @@
   }
   .year-view > table:nth-child(1) > tbody:nth-child(1) > tr {
    display: block;
+  }
+}
+
+
+/* FOOTER */
+/* right */
+@media (min-width: 1171px) {
+    .hl__footer--right {
+        flex-shrink: 0;
+        max-width: 370px;
+    }
+}
+/* left */
+@media (min-width: 781px) {
+    .hl__footer--left {
+        max-width: 180px;
+        margin: 0;
+        margin-right: 30px;
+    }
+}
+/* links */
+@media (min-width: 621px) {
+    .hl__footer--links {
+        flex-basis: 580px;
+        flex-grow: 1;
+        flex-shrink: 0;
+        margin-right: 30px;
+    }
+    .hl__footer__top-links {
+        display: flex;
+    }
+    .hl__footer__social+.hl__footer__quick-links {
+        padding-left: 34px;
+        position: relative;
+    }
+    .hl__footer__social+.hl__footer__quick-links::before {
+        border-left: 1px solid #414141;
+        content: "";
+        display: block;
+        height: calc(100% + 20px);
+        position: absolute;
+        left: 0;
+        top: -10px;
+    }
+}
+@media (max-width: 620px) {
+    .hl__footer--links {
+        flex-wrap: wrap;
+        margin-left: -30px;
+    }
+}
+
+
+/* ADMIN PANEL UPDATES */
+/* account icon */
+@media(max-width:768px){
+  #rightMenuSlide {
+   top:120px;
+  }
+  .topRight_Menu {
+   top:60px;
   }
 }
