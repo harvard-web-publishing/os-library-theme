@@ -36,6 +36,27 @@
   #menu-bar ul.nice-menu a {
     font-size: 17px;
   }
+
+  h1.node-title a,
+  .accordion .ui-widget-content h1 a,
+  .ui-tabs .ui-widget-content h1 a {
+      font-size: 21px;
+  }
+
+  body,
+  .not-front #content-column,
+  .page-search #content-column p,
+  .not-front #content-column p {
+    font-size: 17px;
+    line-height: 29px;
+  }
+
+  .block ol.hl__numbered-list li,
+  #menu-bar ul.nice-menu a,
+  #menu-bar ul.nice-menu .menuparent ul li a,
+  #menu-bar ul.nice-menu .menuparent ul li a.active {
+    font-size: 17px;
+  }
 }
 
 
@@ -398,8 +419,15 @@
     border-bottom: 1px solid #c0c0c0;
     margin-bottom: 0 !important;
   }
-}
 
+  /* event card */
+  .node-event .node-header {
+   margin-bottom: 0 !important;
+  }
+  .event-start .event-content {
+  	padding-top: 0;
+  }
+}
 
 /* TWITTER FEED */
 @media(max-width:768px){
@@ -449,6 +477,14 @@
    grid-column-start: 2;
   }
 }
+@media(max-width:768px){
+  .page-calendar.sidebar-second #columns .region-inner {
+    padding: 20px 0 0 0 !important;
+  }
+  #block-views-os-events-block-1 {
+    width: auto !important;
+  }
+}
 /* yearly one-column layout */
 @media(max-width:670px){
   .calendar-calendar .year-view > table > tbody > tr > td {
@@ -461,6 +497,29 @@
   }
   .year-view > table:nth-child(1) > tbody:nth-child(1) > tr {
    display: block;
+  }
+}
+
+
+/* PULL QUOTE */
+@media(max-width:870px){
+  #content-column .hl__pull-quote .hl__pull-quote p:first-child::after {
+    right: 60px;
+  }
+  .hl__pull-quote .hl__pull-quote {
+    width: 600px;
+    padding-right: 60px;
+  }
+}
+@media(max-width:768px){
+  .hl__pull-quote .hl__pull-quote {
+    background: transparent;
+    padding: 0;
+    margin-top: 0;
+    width: 100% !important;
+  }
+  #content-column .hl__pull-quote .hl__pull-quote p:first-child::after {
+    right: 0;
   }
 }
 

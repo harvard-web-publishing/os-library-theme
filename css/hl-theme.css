@@ -1265,7 +1265,7 @@ table td.mini .mini-day-on a {
     border: transparent;
 }
 
-.page-calendar #block-views-os-events-block-1 {
+#block-views-os-events-block-1 {
     padding: 20px;
 }
 
@@ -1659,6 +1659,23 @@ ul.pager li a:focus {
     display: none;
 }
 
+/* teaser images */
+.node-teaser .view-mode-teaser img, .view-mode-teaser figure img {
+	width: auto !important;
+	max-height: 300px;
+}
+.hl__card-view .view-mode-teaser img, .hl__card-view .view-mode-teaser figure img  {
+  padding: 0 0 15px 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: 0 0;
+}
+.node-teaser .view-mode-teaser .media.media-element-container.media-default {
+  margin: 0;
+  width: 100% !important;
+}
 
 /* card view - people */
 
@@ -1701,9 +1718,23 @@ ul.pager li a:focus {
     padding-bottom: 20px;
 }
 
+.node-type-blog #columns p.author-datetime {
+  margin-bottom: 20px;
+}
+
 .hl__card-view .field-name-field-news-date {
     padding-bottom: 0;
     margin-bottom: 0.4em;
+}
+
+/* news/blog figures */
+.media-element-container {
+ margin:0;
+ width: 100% !important;
+}
+.media-element-container img {
+ height: auto !important;
+ object-fit: contain;
 }
 
 
@@ -1888,8 +1919,8 @@ ul.pager li a:focus {
 
 .hl__pull-quote, .hl__pull-quote--left {
     max-width: 1080px;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -1934,7 +1965,7 @@ ul.pager li a:focus {
 #content-column .hl__pull-quote--left p:first-child::after {
     content: "";
     position: absolute;
-    right: 20px;
+    right: 0px;
     top: 0;
     bottom: 3px;
     width: 110px;
@@ -2127,6 +2158,19 @@ div.tweets-pulled-listing div.tweet-divider {
 	border-bottom: none;
 	margin: 0;
 }
+
+
+/* SOCIAL MEDIA ICONS */
+.follow-icon {
+ /* background-image: url('https://projects.iq.harvard.edu/files/hl-demo/files/hl_follow-icons.png'); */
+ background-image: url(../images/follow-icons--original.png);
+}
+.follow-icon:hover, .follow-icon:focus {
+  /* background-image: url('https://projects.iq.harvard.edu/files/hl-demo/files/hl_follow-icons-hover.png'); */
+  background-image: url(../images/follow-icons--hover.png);
+  border-color: transparent;
+}
+
 
 /* PROJECT PAGE */
 
@@ -2323,7 +2367,8 @@ div.tweets-pulled-listing div.tweet-divider {
     flex-grow: 1;
     flex-shrink: 1;
     margin: 0 auto;
-    max-width: 135px;
+    margin-bottom: 25px !important;
+    max-width: 180px;
 }
 #footer .hl__footer--left a {
     border-bottom: none;
@@ -2346,6 +2391,10 @@ div.tweets-pulled-listing div.tweet-divider {
     flex-shrink: 0;
     margin-left: 30px;
     width: 50%;
+}
+
+.hl__footer--links-column:first-of-type {
+  margin-left: 0;
 }
 
 #footer .hl__footer--links-column li:last-child {
@@ -2441,10 +2490,10 @@ div.tweets-pulled-listing div.tweet-divider {
     background: #1e1e1e;
     color: white;
     font-family: "Trueno", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 14px;
     letter-spacing: 1.87px;
-    line-height: 32px;
+    line-height: 27px;
     margin-bottom: 1.1em;
     text-transform: uppercase;
 }
