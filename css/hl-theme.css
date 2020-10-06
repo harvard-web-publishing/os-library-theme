@@ -477,12 +477,21 @@ body.page-home .region-content-top p {
     max-width: 930px;
 }
 
+/* SUPPORTING LARGE TEXT */
 
-/* supporting large text {
-  font-weight: 400;
+#columns #content-column .hl__large-text, .not-front #content-column .hl__teaser,
+#columns #content-column .hl__large-text a, .not-front #content-column .hl__teaser a,
+#columns #content-column .hl__large-text a:visited, .not-front #content-column .hl__teaser a:visited {
+  font-family: "Trueno",sans-serif;
+  font-weight: 200;
   font-size: 25px;
   line-height: 42px;
-} */
+}
+
+#columns #content-column .hl__large-text a, .not-front #content-column .hl__teaser a,
+#columns #content-column .hl__large-text a:visited, .not-front #content-column .hl__teaser a:visited {
+  font-weight: 700;
+}
 
 
 /* BREADCRUMBS */
@@ -940,14 +949,16 @@ body.page-home .region-content-top h2, body.page-home .region-content-top p {
 }
 
 
-/* sidebar styles */
+/* sidebar styles (both section navigation widget and custom menu named 'section_nav')*/
 
-.section-nav ul.menu li a {
+.section-nav ul.menu li:not(:last-child) a,
+#columns .os-custom-menu ul.menu li:not(:last-child) a,
+#columns #block-os-secondary-menu ul.menu li:not(:last-child) a {
     border-bottom: 1px solid #dfdfdf !important;
 }
 
 #boxes-box-os_pages_section_nav,
-.section-nav ul.menu li a {
+.section-nav ul.menu li a,  #columns .os-custom-menu a, #columns #block-os-secondary-menu a {
     border-color: transparent;
     font-weight: 400;
     color: #1e1e1e;
@@ -956,12 +967,16 @@ body.page-home .region-content-top h2, body.page-home .region-content-top p {
 
 .section-nav a:hover,
 .section-nav a:focus,
-.section-nav .leaf .active {
+.section-nav .leaf .active,
+#columns .os-custom-menu a:hover,  #columns .os-custom-menu:focus, #columns .os-custom-menu .leaf .active,
+#columns #block-os-secondary-menu a:hover,  #columns #block-os-secondary-menu:focus, #columns #block-os-secondary-menu .leaf .active {
     background-color: #6c6c6c !important;
     color: white !important;
 }
 
-.section-nav .leaf .active::after {
+.section-nav .leaf .active::after,
+#columns .os-custom-menu .leaf .active::after,
+#columns #block-os-secondary-menu .leaf .active::after {
     border-style: solid;
     border-width: 2px 2px 0 0;
     content: "";
@@ -972,6 +987,25 @@ body.page-home .region-content-top h2, body.page-home .region-content-top p {
     width: 0.3em;
     right: 12px;
 }
+
+#columns .os-custom-menu li.leaf {
+  position: relative;
+}
+
+#columns .accordion ul.nice-menu li a,
+#columns .os-custom-menu ul.nice-menu li a,
+#columns #block-os-primary-menu ul.nice-menu li a,
+#columns #block-os-secondary-menu ul.nice-menu li a,
+#columns .os-custom-menu ul.menu li a,
+#columns #block-os-primary-menu ul.menu li a,
+#columns #block-os-secondary-menu ul.menu li a {
+ /* display:block;
+ text-decoration:none !important;
+ padding:8px 15px;
+ border-bottom:2px solid #fff !important; */
+ font-size:17px;
+}
+
 
 
 /* CALENDAR & EVENTS */
@@ -1746,7 +1780,10 @@ ul.pager li a:focus {
 .hl__content-block--dots,
 .hl__content-block--dots-button {
     background: #FFFFFF url('../images/dots.png') top center repeat;
-    /* if create a css folder, use ../images/dots.png */
+}
+
+#content-column .hl__content-block--dots-button p {
+	font-family: "Trueno", sans-serif;
 }
 
 
@@ -1754,6 +1791,15 @@ ul.pager li a:focus {
 
 .hl__content-block--dots .block-inner {
     padding: 60px;
+}
+
+#content-column .hl__content-block--dots p, #content-column .hl__content-block--dots a {
+	font-size: 26px;
+	line-height: 40px;
+}
+
+#content-column .hl__content-block--dots p {
+  font-style: italic;
 }
 
 /* solid dark */
