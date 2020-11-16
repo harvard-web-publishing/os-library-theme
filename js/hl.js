@@ -4,13 +4,14 @@ jQuery(document).ready(function($) {
     $("input").attr("placeholder", "Search this site");
 
     // Change page header from 'Search' to 'Saerch Results'
-    $("#page-title:contains(Search)").text("Search Results");
+    $(".page-search-site #page-title:contains(Search)").text("Search Results");
 
     // Add 'Admin Login' after the editable content in the footer
 
 
-    // If no href in breadcrumb link, remove pointer and hover and change color to #6c6c6c
-
+    // If no href in breadcrumb link, remove from html
+    $(".breadcrumb a:not([href]) + span").remove();
+    $(".breadcrumb a:not([href])").remove();
 
     // Remove ellipsis from articles
     // $("#columns article:contains('...')").html(function(_, html) {
@@ -25,6 +26,21 @@ jQuery(document).ready(function($) {
     $("#columns article.node-teaser").click(function() {
         window.location = $(this).find("a").attr("href");
         return false;
+    });
+
+    // Add class to style teaser text for news/blog detail pages
+    $(".node-type-news, .node-type-blog").each(function(){
+      const $el = $(this);
+      const $content = $el.find(".field-name-body .field-item.even p:first-of-type");
+      const $content_html = $content.html();
+      const $findBreak = $content_html.indexOf("<!--break-->");
+
+      if($findBreak != -1){
+        var teaser = $content_html.substring(0, $findBreak);
+        var postTeaser = $content_html.substring($findBreak);
+
+        $content.html('<p class="hl__teaser">' + teaser + '</p><p>' + postTeaser + '</p>');
+      }
     });
 
     // Wrap searchbox on results page in a div
