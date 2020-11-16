@@ -5,7 +5,7 @@
 
 ;----------// Theme Information
 
-  name        = Harvard Library 
+  name        = Harvard Library
   description = v1.0
   module      = hwpi_modern
   screenshot  = screenshot.png
