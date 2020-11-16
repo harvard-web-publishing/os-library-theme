@@ -100,18 +100,9 @@ textarea {
 
 #block-os-pages-main-content,
 #main-content,
-.block-boxes-os_boxes_html
-/*custom html widget */
-
-,
-.block-boxes-os_sv_list_box
-/* list of posts */
-
-,
-.block-boxes-os_boxes_accordion
-/* accordion widget */
-
-{
+.block-boxes-os_boxes_html /*custom html widget */,
+.block-boxes-os_sv_list_box /* list of posts */,
+.block-boxes-os_boxes_accordion /* accordion widget */ {
     max-width: 930px;
 }
 
@@ -127,14 +118,9 @@ textarea {
 .hl__content-block--dots-button,
 .hl__quick-facts,
 .block-boxes-os_boxes_columns .block-boxes-os_boxes_html,
-.hl__full-width.block-boxes-os_boxes_html
-/* generic html block that you want to be the full width - ARE THERE ANY OF THESE BESIDES THE RIGHT-ARROW SEE ALL LINKS? */
-
-,
-.hl__card-view.block-boxes-os_sv_list_box
-/* list of posts - card view */
-
-{
+.hl__circle-list__callout, .hl__circle-list__promo,
+.hl__full-width.block-boxes-os_boxes_html,
+.hl__card-view.block-boxes-os_sv_list_box /* list of posts - card view */ {
     max-width: 100%;
 }
 
@@ -958,7 +944,7 @@ body.page-home .region-content-top h2, body.page-home .region-content-top p {
 }
 
 #boxes-box-os_pages_section_nav,
-.section-nav ul.menu li a,  #columns .os-custom-menu a, #columns #block-os-secondary-menu a {
+.section-nav ul.menu li a,  #columns .os-custom-menu a:not(.contextual-links-trigger), #columns #block-os-secondary-menu a {
     border-color: transparent;
     font-weight: 400;
     color: #1e1e1e;
@@ -968,7 +954,7 @@ body.page-home .region-content-top h2, body.page-home .region-content-top p {
 .section-nav a:hover,
 .section-nav a:focus,
 .section-nav .leaf .active,
-#columns .os-custom-menu a:hover,  #columns .os-custom-menu:focus, #columns .os-custom-menu .leaf .active,
+#columns .os-custom-menu a:not(.contextual-links-trigger):hover,  #columns .os-custom-menu:not(.contextual-links-trigger):focus, #columns .os-custom-menu .leaf .active,
 #columns #block-os-secondary-menu a:hover,  #columns #block-os-secondary-menu:focus, #columns #block-os-secondary-menu .leaf .active {
     background-color: #6c6c6c !important;
     color: white !important;
@@ -1709,6 +1695,11 @@ ul.pager li a:focus {
 .node-teaser .view-mode-teaser .media.media-element-container.media-default {
   margin: 0;
   width: 100% !important;
+}
+/* bottom padding for full-width images */
+.node-type-news figure .media-element.file-default.file-os-files-xxlarge,
+.node-type-blog figure .media-element.file-default.file-os-files-xxlarge {
+	padding: 0 0 1.5em 0;
 }
 
 /* card view - people */
