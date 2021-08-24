@@ -1,5 +1,8 @@
 jQuery(document).ready(function($) {
 
+    // move hero image above #columns container (so that it can be full width of page)
+    $(".hl__hero").insertBefore($("#columns"));
+
     // Add placeholder text in searchbox
     $("input").attr("placeholder", "Search this site");
 

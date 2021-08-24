@@ -13,7 +13,7 @@
     line-height: 1.7058823529;  /* line-height/font-size */
   }
 
-  h1, h1#page-title, body.page-home .region-content-top h2 {
+  h1, h1#page-title, body.page-home .region-content-top h2, .hl__hero .boxes-box-content h2 {
     font-size: 32px;
     line-height: 40px;
   }
