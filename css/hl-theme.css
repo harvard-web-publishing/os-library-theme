@@ -1,4 +1,5 @@
 <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+
 /* GLOBAL */
 
 html {
@@ -66,10 +67,6 @@ textarea {
 
 #main-content-header {
     margin-bottom: 15px;
-}
-
-.page-home #content-panels .region-content-first {
-    margin-top: 60px;
 }
 
 #content-panels .block-inner {
