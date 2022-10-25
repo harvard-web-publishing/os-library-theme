@@ -1,3 +1,6 @@
+/* LORA FONT */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 /* LOCAL TRUENO FONT LOAD-IN */
 @font-face {
     font-family: "Trueno";
@@ -82,9 +85,6 @@
     font-weight: 800;
     font-style: italic
 }
-
-/* LORA FONT */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* GLOBAL */
 
