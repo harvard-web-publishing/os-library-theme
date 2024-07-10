@@ -64,7 +64,7 @@ jQuery(document).ready(function($) {
 
     // Add general links to footer
     $("footer .hl__footer--links").prepend(
-        '<div class="hl__footer--links-column"><ul><li><a class="hl__link-tag" href="https://hollis.harvard.edu/">HOLLIS</a></li><li><a class="hl__link-tag" href="https://images.hollis.harvard.edu/">HOLLIS Images</a></li><li><a class="hl__link-tag" href="https://library.harvard.edu/digital-collections">Harvard Digital Collections</a></li><li><a class="hl__link-tag" href="https://hollisarchives.lib.harvard.edu/">HOLLIS for Archival Discovery</a></li><li><a class="hl__link-tag" href="http://nrs.harvard.edu/urn-3:hul.ois:databases">Databases</a></li><li><a class="hl__link-tag" href="https://staff.library.harvard.edu/">Staff Portal</a></li><li><a class="hl__link-tag" href="/cp/build/layout">Admin Login</a></li></ul></div>'
+        '<div class="hl__footer--links-column"><ul><li><a class="hl__link-tag" href="https://hollis.harvard.edu/">HOLLIS</a></li><li><a class="hl__link-tag" href="https://images.hollis.harvard.edu/">HOLLIS Images</a></li><li><a class="hl__link-tag" href="https://hollisarchives.lib.harvard.edu/">HOLLIS for Archival Discovery</a></li><li><a class="hl__link-tag" href="http://nrs.harvard.edu/urn-3:hul.ois:databases">Databases</a></li><li><a class="hl__link-tag" href="https://staff.library.harvard.edu/">Staff Portal</a></li><li><a class="hl__link-tag" href="/cp/build/layout">Admin Login</a></li></ul></div>'
     );
 
     // Add HL logo before editable region of the footer
